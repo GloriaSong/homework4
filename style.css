@@ -1,21 +1,33 @@
+.header{
+     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg/1280px-New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg");
+background-position: bottom;
+background-size:100%;
+height:448px;
+margin:auto;
+}
+
 h1 h2 {
     font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
+    
 }
 
 h1 {
     font-size: 60px;
     text-align: center;
+     color: #e0e0e0;
 }
 
 h2 {
     font-size: 40px;
     text-align: center;
+    color: #e0e0e0;
 }
 
 h3 {
     text-align: center;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #e0e0e0;
 }
 
 .caption {

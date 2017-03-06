@@ -13,63 +13,112 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 
 </head>
 
 <body>
-    <div class="container-fluid">
-        <header>
+
+        <div class="header">
             <h1>Budget Calculator for Studying Abroad</h1>
             <span><h2>Taking Studying in Columbia University for Example</h2></span>
             <h3> By Gloria Song</h3>
-        </header>
-    </div>
+        </div>
 
     <div class="container">
-
+ <h2>Expenses</h2>
         <div class="row">
-            <div class="col-md-8">
-                <h2>Expenses</h2>
+            <div class="col-md-4">
                 <h4>Program Expenses</h4>
                 <div class="form-group">
                     <div class="form-item">
                         <label for="program-tuition-and-fees">Program Tuition and Fees</label><span class="field-prefix">$</span>
-                        <input type="text" id="program-tuition-and-fees" value="0">
+                        <input class="form-control" type="text" id="program-tuition-and-fees" value="0">
                     </div>
 
                     <div class="form-item">
                         <label for="room">Room</label><span class="field-prefix">$</span>
-                        <input type="text" id="room" value="0">
+                        <input class="form-control" type="text" id="room" value="0">
                     </div>
                     <div class="form-item">
                         <label for="board">Board</label><span class="field-prefix">$</span>
-                        <input type="text" id="board" value="0">
+                        <input class="form-control" type="text" id="board" value="0">
                     </div>
                     <div class="form-item">
-                        <label for="books-and-course-materials">Books and Course Materials</label><span class="field-prefix">$</span>
-                        <input type="text" id="books-and-course-materials" value="0">
+                        <label for="books">Books and Course Materials</label><span class="field-prefix">$</span>
+                        <input class="form-control" type="text" id="books" value="0">
+                    </div>
+
+<button class="btn btn-primary" id="calculate">Calculate</button>
+
+ <div class="form-item">
+                        <label for="total-program-expenses">Total Program Expenses</label><span class="field-prefix">$</span>
+                        <input class="form-control" type="text" id="total-program-expenses" value="0">
                     </div>
 
                     <script>
                         $(function() {
                             $('#calculate').click(function() {
-                                var 'program-tuition-and-fees' = $('#program-tuition-and-fees').val();
-                                var 'room' = $('#room').val();
-                                var 'board' = $('')
-
-
-
+                                var program = parseInt($('#program-tuition-and-fees').val());
+                                var room = parseInt($('#room').val());
+                                var board=parseInt($('#board').val());
+                                var books = parseInt($('#books').val());
+                                var totalprogramexpenses= program + room + board + books;
+                                $('#total-program-expenses').val(totalprogramexpenses);
+                             
                             })
                         })
                     </script>
                 </div>
 
+           </div>
 
+<div class="col-md-4">
+                <h4>Additional Expenses</h4>
+                <div class="form-group">
+                    <div class="form-item">
+                        <label for="program-tuition-and-fees">Passport and Visa</label><span class="field-prefix">$</span>
+                        <input class="form-control" type="text" id="program-tuition-and-fees" value="0">
+                    </div>
 
+                    <div class="form-item">
+                        <label for="room">Health Insurance</label><span class="field-prefix">$</span>
+                        <input class="form-control" type="text" id="room" value="0">
+                    </div>
+                    <div class="form-item">
+                        <label for="board">Meals</label><span class="field-prefix">$</span>
+                        <input class="form-control" type="text" id="board" value="0">
+                    </div>
+                    <div class="form-item">
+                        <label for="books">Round Trip Flight</label><span class="field-prefix">$</span>
+                        <input class="form-control" type="text" id="books" value="0">
+                    </div>
 
-            </div>
+<button class="btn btn-primary" id="calculate">Calculate</button>
 
-            <div class="col-md-4">
+ <div class="form-item">
+                        <label for="total-program-expenses">Total Additional Expenses</label><span class="field-prefix">$</span>
+                        <input class="form-control" type="text" id="total-program-expenses" value="0">
+                    </div>
+
+                    <script>
+                        $(function() {
+                            $('#calculate').click(function() {
+                                var program = parseInt($('#program-tuition-and-fees').val());
+                                var room = parseInt($('#room').val());
+                                var board=parseInt($('#board').val());
+                                var books = parseInt($('#books').val());
+                                var totalprogramexpenses= program + room + board + books;
+                                $('#total-program-expenses').val(totalprogramexpenses);
+                             
+                            })
+                        })
+                    </script>
+                </div>
+                </div><!--end of additional expenses-->
+
+                 <div class="col-md-4">
                 <div class="pictures" align="center">
 
                     <img src="http://yegortkachenko.com/images/columbia.jpg" width="100%" height="100%">
