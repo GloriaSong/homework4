@@ -144,3 +144,17 @@ tr {
 .reference {
     font-size: 18px;
 }
+
+ol {
+    counter-reset: item;
+}
+
+ol li {
+    display: block;
+}
+
+ol li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: papayawhip;
+}
