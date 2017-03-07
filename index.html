@@ -19,10 +19,17 @@
 </head>
 
 <body>
+
+    <div class="header">
+        <h1>Budget Calculator for Studying Abroad</h1>
+
+        <h3> By Gloria Song</h3>
+    </div>
+
     <div id="nav_container">
         <nav>
-            <span><a href="https://gloriasong.github.io/homework4/" target="_blank">Home</a></span>
-            <span><a href="https://gloriasong.github.io/homework4#exactline" target="_blank">Expense</a></span>
+            <span><a href="https://gloriasong.github.io/homework4/">Home</a></span>
+            <span><a href="https://gloriasong.github.io/homework4#exactline">Expense</a></span>
             <span><a href="http://sfs.columbia.edu/content/tuition-and-fees" target="_blank">More</a></span>
         </nav>
         <div id="selector"></div>
@@ -45,40 +52,37 @@
         </script>
     </div>
     <!--navigation container end-->
-    <div class="header">
-        <h1>Budget Calculator for Studying Abroad</h1>
-        <span><h2>Taking Studying in Columbia University for Example</h2></span>
-        <h3> By Gloria Song</h3>
-    </div>
+
 
     <div class="container">
+        <h2 style="color:black">Taking Studying in Columbia University for Example</h2>
         <h2 style="color:black"><a name="exactline">Expenses</a></h2>
         <div class="row">
             <div class="col-md-4">
                 <h4>Program Expenses</h4>
                 <div class="form-group">
                     <div class="form-item">
-                        <label for="program-tuition-and-fees">Program Tuition and Fees</label><span class="field-prefix">$</span>
+                        <label for="program-tuition-and-fees">Program Tuition and Fees</label>
                         <input class="form-control" type="text" id="program-tuition-and-fees" value="0">
                     </div>
 
                     <div class="form-item">
-                        <label for="room">Room</label><span class="field-prefix">$</span>
+                        <label for="room">Room</label>
                         <input class="form-control" type="text" id="room" value="0">
                     </div>
                     <div class="form-item">
-                        <label for="board">Board</label><span class="field-prefix">$</span>
+                        <label for="board">Board</label>
                         <input class="form-control" type="text" id="board" value="0">
                     </div>
                     <div class="form-item">
-                        <label for="books">Books and Course Materials</label><span class="field-prefix">$</span>
+                        <label for="books">Books and Course Materials</label>
                         <input class="form-control" type="text" id="books" value="0">
                     </div>
 
                     <button class="btn btn-primary" id="calculate">Calculate</button>
 
                     <div class="form-item">
-                        <label for="total-program-expenses">Total Program Expenses</label><span class="field-prefix">$</span>
+                        <label for="total-program-expenses">Total Program Expenses</label>
                         <input class="form-control" type="text" id="total-program-expenses" value="0">
                     </div>
 
@@ -102,41 +106,41 @@
             <div class="col-md-4">
                 <h4>Additional Expenses</h4>
                 <div class="form-group">
-                    <div class="form-item">
-                        <label for="program-tuition-and-fees">Passport and Visa</label><span class="field-prefix">$</span>
-                        <input class="form-control" type="text" id="program-tuition-and-fees" value="0">
-                    </div>
 
                     <div class="form-item">
-                        <label for="room">Health Insurance</label><span class="field-prefix">$</span>
-                        <input class="form-control" type="text" id="room" value="0">
+                        <label for="Health-Insurance">Health Insurance</label>
+                        <input class="form-control" type="text" id="insurance" value="0">
                     </div>
                     <div class="form-item">
-                        <label for="board">Meals</label><span class="field-prefix">$</span>
-                        <input class="form-control" type="text" id="board" value="0">
+                        <label for="meals">Meals</label>
+                        <input class="form-control" type="text" id="meals" value="0">
                     </div>
                     <div class="form-item">
-                        <label for="books">Round Trip Flight</label><span class="field-prefix">$</span>
-                        <input class="form-control" type="text" id="books" value="0">
+                        <label for="Personal-expenses">Personal Expenses</label>
+                        <input class="form-control" type="text" id="personal" value="0">
+                    </div>
+                    <div class="form-item">
+                        <label for="flights">Round Trip Flight</label>
+                        <input class="form-control" type="text" id="flights" value="0">
                     </div>
 
-                    <button class="btn btn-primary" id="calculate">Calculate</button>
+                    <button class="btn btn-primary" id="calculate1">Calculate</button>
 
                     <div class="form-item">
-                        <label for="total-program-expenses">Total Additional Expenses</label><span class="field-prefix">$</span>
-                        <input class="form-control" type="text" id="total-program-expenses" value="0">
+                        <label for="total-additional-expenses">Total Additional Expenses</label>
+                        <input class="form-control" type="text" id="total-additional-expenses" value="0">
                     </div>
 
                     <script>
                         $(function() {
-                            $('#calculate').click(function() {
-                                var program = parseInt($('#program-tuition-and-fees').val());
-                                var room = parseInt($('#room').val());
-                                var board = parseInt($('#board').val());
-                                var books = parseInt($('#books').val());
-                                var totalprogramexpenses = program + room + board + books;
-                                $('#total-program-expenses').val(totalprogramexpenses);
+                            $('#calculate1').click(function() {
 
+                                var insurance = parseInt($('#insurance').val());
+                                var meals = parseInt($('#meals').val());
+                                var flights = parseInt($('#flights').val());
+                                var personal = parseInt($('#personal').val());
+                                var totaladditionalexpenses = insurance + meals + flights + personal;
+                                $('#total-additional-expenses').val(totaladditionalexpenses);
                             })
                         })
                     </script>
@@ -145,17 +149,41 @@
             <!--end of additional expenses-->
 
             <div class="col-md-4">
+                <h4>Total Expenses</h4>
+                <div class="form-group">
+                    <button class="btn btn-primary" id="calculate2">Calculate</button>
+
+                    <div class="form-item">
+                        <label for="totalexpenses">Total Expenses</label>
+                        <input class="form-control" type="text" id="total" value="0">
+                    </div>
+
+
+                    <script>
+                        $(function() {
+                            $('#calculate2').click(function() {
+                                var program = parseInt($('#total-program-expenses').val());
+                                var additonal = parseInt($('#total-additional-expenses').val());
+
+                                var totalexpenses = program + additional;
+                                $('#total').val(totalexpenses);
+
+                            })
+                        })
+                    </script>
+                </div>
+
                 <div class="pictures" align="center">
                     <img src="http://yegortkachenko.com/images/columbia.jpg" width="100%" height="100%">
                 </div>
             </div>
-            <!--end of the picture div-->
+            <!--end of the total expense div-->
 
         </div>
         <!--end of row-->
 
     </div>
-
+    </div>
 
     <footer>
 
