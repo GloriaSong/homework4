@@ -19,15 +19,45 @@
 </head>
 
 <body>
+    <div id="nav_container">
+        <nav>
+            <span><a href="https://gloriasong.github.io/homework4/" target="_blank">Home</a></span>
+            <span><a href="https://gloriasong.github.io/homework4#exactline" target="_blank">Expense</a></span>
+            <span>More</span>
 
-        <div class="header">
-            <h1>Budget Calculator for Studying Abroad</h1>
-            <span><h2>Taking Studying in Columbia University for Example</h2></span>
-            <h3> By Gloria Song</h3>
+        </nav>
+        <div id="selector">
+
         </div>
+    </div>
+    <script>
+        $("span:nth-child(1)").mouseover(function() {
+            $("#selector").animate({
+                "left": "16.5%"
+            }, 200);
+        });
+        $("span:nth-child(2)").mouseover(function() {
+            $("#selector").animate({
+                "left": "39%"
+            }, 200);
+        });
+        $("span:nth-child(3)").mouseover(function() {
+            $("#selector").animate({
+                "left": "63.1%"
+            }, 200);
+        });
+    </script>
+
+    </div>
+    </div>
+    <div class="header">
+        <h1>Budget Calculator for Studying Abroad</h1>
+        <span><h2>Taking Studying in Columbia University for Example</h2></span>
+        <h3> By Gloria Song</h3>
+    </div>
 
     <div class="container">
- <h2>Expenses</h2>
+        <h2 style="color:black"><a name="exactline">Expenses</a></h2>
         <div class="row">
             <div class="col-md-4">
                 <h4>Program Expenses</h4>
@@ -50,9 +80,9 @@
                         <input class="form-control" type="text" id="books" value="0">
                     </div>
 
-<button class="btn btn-primary" id="calculate">Calculate</button>
+                    <button class="btn btn-primary" id="calculate">Calculate</button>
 
- <div class="form-item">
+                    <div class="form-item">
                         <label for="total-program-expenses">Total Program Expenses</label><span class="field-prefix">$</span>
                         <input class="form-control" type="text" id="total-program-expenses" value="0">
                     </div>
@@ -62,19 +92,19 @@
                             $('#calculate').click(function() {
                                 var program = parseInt($('#program-tuition-and-fees').val());
                                 var room = parseInt($('#room').val());
-                                var board=parseInt($('#board').val());
+                                var board = parseInt($('#board').val());
                                 var books = parseInt($('#books').val());
-                                var totalprogramexpenses= program + room + board + books;
+                                var totalprogramexpenses = program + room + board + books;
                                 $('#total-program-expenses').val(totalprogramexpenses);
-                             
+
                             })
                         })
                     </script>
                 </div>
 
-           </div>
+            </div>
 
-<div class="col-md-4">
+            <div class="col-md-4">
                 <h4>Additional Expenses</h4>
                 <div class="form-group">
                     <div class="form-item">
@@ -95,9 +125,9 @@
                         <input class="form-control" type="text" id="books" value="0">
                     </div>
 
-<button class="btn btn-primary" id="calculate">Calculate</button>
+                    <button class="btn btn-primary" id="calculate">Calculate</button>
 
- <div class="form-item">
+                    <div class="form-item">
                         <label for="total-program-expenses">Total Additional Expenses</label><span class="field-prefix">$</span>
                         <input class="form-control" type="text" id="total-program-expenses" value="0">
                     </div>
@@ -107,18 +137,19 @@
                             $('#calculate').click(function() {
                                 var program = parseInt($('#program-tuition-and-fees').val());
                                 var room = parseInt($('#room').val());
-                                var board=parseInt($('#board').val());
+                                var board = parseInt($('#board').val());
                                 var books = parseInt($('#books').val());
-                                var totalprogramexpenses= program + room + board + books;
+                                var totalprogramexpenses = program + room + board + books;
                                 $('#total-program-expenses').val(totalprogramexpenses);
-                             
+
                             })
                         })
                     </script>
                 </div>
-                </div><!--end of additional expenses-->
+            </div>
+            <!--end of additional expenses-->
 
-                 <div class="col-md-4">
+            <div class="col-md-4">
                 <div class="pictures" align="center">
 
                     <img src="http://yegortkachenko.com/images/columbia.jpg" width="100%" height="100%">
@@ -131,109 +162,23 @@
     </div>
     </div>
 
-    <article>
-        <div class="container">
-            <header>
-                <h2> What should the real data pattern look like</h2>
-            </header>
-
-            <div class="row">
-
-                <div class="col-md-6">
-                    <img src="http://35fmis1l7rwm1rqwis4fnzi6.wpengine.netdna-cdn.com/wp-content/uploads//sites/54/2016/01/23-1170x730.png" width="100%" height="100%">
-                    <div class="capiton"><strong>Source: </strong> Politifact</div>
-
-                    <div class="text">
-                        <p>
-                            The number of cancer screening and preventative services was indeed decreasing as the orginal graphic showed. But the number of those screening was far more than the abortion procedures.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <img src="http://35fmis1l7rwm1rqwis4fnzi6.wpengine.netdna-cdn.com/wp-content/uploads//sites/54/2016/01/32-1170x749.png" width="100%" height="100%">
-                    <div class="capiton"><strong>Source: </strong> Politifact</div>
-
-                    <div class="text">
-                        <p>
-                            This graphic shows the percentage change of the two operations. It reveals the decreasing trend of the cancer screening and preventative services and the relative changing magnititude of the two operations.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-            <!--end of the row-->
-
-
-            <div class="info">
-                <h2> Further Information</h2>
-
-                <div class="col-md-6">
-                    <div class="table">
-                        <h4> Planned Parenthood Services</h4>
-                        <table style="width:100%">
-                            <tr>
-                                <td> <strong>Services</strong></td>
-                                <td><strong>Proportion</strong></td>
-                            </tr>
-                            <tr>
-                                <td>STI/STD Testing and Treatment</td>
-                                <td>41%</td>
-                            </tr>
-                            <tr>
-                                <td>Cancer Screening and Prevention</td>
-                                <td>10%</td>
-                            </tr>
-                            <tr>
-                                <td>Other Women's Health Services</td>
-                                <td>11%</td>
-                            </tr>
-                            <tr>
-                                <td>Abortion services</td>
-                                <td>3%</td>
-                            </tr>
-                            <tr>
-                                <td>Other Services</td>
-                                <td>1%</td>
-                            </tr>
-                            <tr>
-                                <td>Contraception</td>
-                                <td>34%</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <img src="https://www.plannedparenthood.org/files/cache/8d63bb021e68b2b75e29f20f75f07958_f12666.jpg" width="85%">
-
-                </div>
-
-
-
-            </div>
-            <!--end of the container-->
-    </article>
-
 
     <footer>
-        <div class="container-fluid">
-            <div class="reference">
-                <h2>Reference</h2>
-                <ol>
-                    <li>
-                        <a href="http://www.politifact.com/truth-o-meter/statements/2015/oct/01/jason-chaffetz/chart-shown-planned-parenthood-hearing-misleading-/" target="_blank"> Chart shown at Planned Parenthood hearing is misleading and 'ethically wrong'</a>
-                    </li>
-                    <li> <a href="http://cn.gijn.org/2016/01/05/%E6%95%B0%E6%8D%AE%E5%9B%BE%E5%A4%84%E5%A4%84%E6%9C%89%E9%99%B7%E9%98%B1%EF%BC%9F%E4%BA%94%E5%BC%A0%E5%9B%BE%E5%91%8A%E8%AF%89%E4%BD%A0%E5%A6%82%E4%BD%95%E8%BE%A8%E5%88%AB%E7%9C%9F%E4%BC%AA/"
-                            target="_blank">数据图处处有陷阱？五个例子教你辨真伪</a> </li>
 
-                    <li><a href="https://www.youtube.com/watch?v=iGlLLzw5_KM" target="_blank">Planned Parenthood's Cecile Richards Shuts Down GOP Chair Over Abortion Chart</a></li>
+        <div class="reference">
+            <h2>Techniques References</h2>
+            <ol>
+                <li>
+                    <a href="https://www.thesitewizard.com/html-tutorial/link-to-specific-line-or-paragraph.shtml" target="_blank">How to Link to a Specific Line or Paragraph on a Web Page</a>
+                </li>
+                <li> <a href="http://cn.gijn.org/2016/01/05/%E6%95%B0%E6%8D%AE%E5%9B%BE%E5%A4%84%E5%A4%84%E6%9C%89%E9%99%B7%E9%98%B1%EF%BC%9F%E4%BA%94%E5%BC%A0%E5%9B%BE%E5%91%8A%E8%AF%89%E4%BD%A0%E5%A6%82%E4%BD%95%E8%BE%A8%E5%88%AB%E7%9C%9F%E4%BC%AA/" target="_blank">数据图处处有陷阱？五个例子教你辨真伪</a>                    </li>
 
-                </ol>
+                <li><a href="https://www.youtube.com/watch?v=iGlLLzw5_KM" target="_blank">Planned Parenthood's Cecile Richards Shuts Down GOP Chair Over Abortion Chart</a></li>
 
-            </div>
+            </ol>
+
         </div>
+
     </footer>
 
 </body>
